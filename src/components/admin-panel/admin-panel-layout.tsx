@@ -1,7 +1,6 @@
 "use client";
 
 import { Outlet } from "react-router";
-import { Footer } from "@/components/admin-panel/footer";
 import { Sidebar } from "@/components/admin-panel/sidebar";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
@@ -25,14 +24,7 @@ export default function AdminPanelLayout() {
         <Navbar title="" />
         <Outlet />
       </main>
-      <footer
-        className={cn(
-          "transition-[margin-left] ease-in-out duration-300",
-          !settings.disabled && (!getOpenState() ? "lg:ml-[90px]" : "lg:ml-72")
-        )}
-      >
-        <Footer />
-      </footer>
+     
     </>
   );
 }
