@@ -1,8 +1,11 @@
 {
-  "name": "project setup",
-  "private": true,
-  "version": "0.0.0",
+  "name": "project-setup",
+  "version": "1.0.0",
+  "description": "Modern web application template with authentication, admin/user panels, and comprehensive setup tools",
   "type": "module",
+  "bin": {
+    "create-project-setup": "./bin/create-project-setup.mjs"
+  },
   "scripts": {
     "dev": "vite --port 5000",
     "build": "tsc -b && vite build",
@@ -10,8 +13,22 @@
     "preview": "vite preview",
     "setup": "npm install && npm run build",
     "setup:win": "powershell -ExecutionPolicy Bypass -File ./setup.ps1",
-    "setup:unix": "chmod +x ./setup.sh && ./setup.sh"
+    "setup:unix": "chmod +x ./setup.sh && ./setup.sh",
+    "create": "node bin/create-project-setup.js"
   },
+  "keywords": [
+    "react",
+    "typescript",
+    "redux",
+    "tailwind",
+    "vite",
+    "template",
+    "boilerplate",
+    "authentication",
+    "admin-panel"
+  ],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-collapsible": "^1.1.12",

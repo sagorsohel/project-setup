@@ -3,7 +3,7 @@
 # Bus Admin - One Command Setup Script
 # This script sets up the entire project with one command
 
-echo "🚀 Bus Admin - Project Setup"
+echo "🚀 Project Setup - Installation Script"
 echo "=============================="
 echo ""
 
@@ -65,5 +65,7 @@ echo ""
 echo "🔐 Demo Credentials:"
 echo "   Admin: admin@gmail.com / 123456"
 echo "   User:  user@gmail.com / 123456"
+echo ""
+echo "📚 For more information, see README.md"
 echo ""
 

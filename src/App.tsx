@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="app-shell">
       <header className="app-shell__header">
-        <div className="brand">Bus Admin</div>
+        <div className="brand">Project Setup</div>
         <nav className="app-shell__nav">
           <NavLink to="/" end>
             Home

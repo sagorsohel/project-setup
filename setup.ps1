@@ -1,7 +1,7 @@
 # Bus Admin - One Command Setup Script (PowerShell)
 # This script sets up the entire project with one command
 
-Write-Host "🚀 Bus Admin - Project Setup" -ForegroundColor Cyan
+Write-Host "🚀 Project Setup - Installation Script" -ForegroundColor Cyan
 Write-Host "==============================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -65,7 +65,7 @@ Write-Host "   1. Run 'npm run dev' to start the development server"
 Write-Host "   2. Open http://localhost:5000 in your browser"
 Write-Host ""
 Write-Host "🔐 Demo Credentials:" -ForegroundColor Cyan
-Write-Host "   Admin: admin@gmail.com / 123456"
-Write-Host "   User:  user@gmail.com / 123456"
+Write-Host "   Admin: admin@gmail.com / 123456" -ForegroundColor Yellow
+Write-Host "   User:  user@gmail.com / 123456" -ForegroundColor Yellow
 Write-Host ""
 

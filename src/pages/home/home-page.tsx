@@ -9,10 +9,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="text-center mb-16 md:mb-24">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-          Welcome to Bus Admin
+          Welcome to Project Setup
         </h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Your comprehensive solution for managing bus operations, routes, and passengers with ease and efficiency.
+          A modern web application template with authentication, admin/user panels, and comprehensive project setup tools.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="text-base">
@@ -40,7 +40,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold">Dashboard</h3>
           </div>
           <p className="text-muted-foreground mb-4">
-            Get a comprehensive overview of your bus operations with real-time analytics and insights.
+            Get a comprehensive overview of your application with real-time analytics and insights.
           </p>
           <Button asChild variant="ghost" className="w-full">
             <Link to="/admin/dashboard">
@@ -58,7 +58,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold">Admin Panel</h3>
           </div>
           <p className="text-muted-foreground mb-4">
-            Manage routes, schedules, and system settings with our powerful admin interface.
+            Manage your application settings, users, and system configuration with our powerful admin interface.
           </p>
           <Button asChild variant="ghost" className="w-full">
             <Link to="/admin/login">
@@ -76,7 +76,7 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold">User Portal</h3>
           </div>
           <p className="text-muted-foreground mb-4">
-            Easy-to-use interface for passengers to view schedules, book tickets, and manage their accounts.
+            Easy-to-use interface for users to access features, manage their profiles, and interact with the application.
           </p>
           <Button asChild variant="ghost" className="w-full">
             <Link to="/user/login">

@@ -1,8 +1,84 @@
-# Bus Admin - Modern Web Application
+# Project Setup - Modern Web Application Template
 
-A comprehensive bus management system built with React, TypeScript, Redux Toolkit, and Tailwind CSS. Features admin and user panels with authentication, dark/light mode, and responsive design.
+A comprehensive, production-ready web application template built with React, TypeScript, Redux Toolkit, and Tailwind CSS. Features admin and user panels with authentication, dark/light mode, and responsive design.
 
-## 🚀 Features
+## 🚀 Quick Start (One Command)
+
+### Install and Create New Project
+
+```bash
+npx create-project-setup my-app
+```
+
+Or install globally:
+
+```bash
+npm install -g project-setup
+create-project-setup my-app
+```
+
+### Or Use This Template Directly
+
+```bash
+# Clone this repository
+git clone <repository-url>
+cd project-setup
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The application will start on `http://localhost:5000`
+
+## 📋 Prerequisites
+
+- Node.js 18+ and npm
+- Modern web browser
+
+## 🛠️ Installation Methods
+
+### Method 1: Using NPX (Recommended)
+
+```bash
+npx create-project-setup my-app
+cd my-app
+npm run dev
+```
+
+### Method 2: Using NPM Package
+
+```bash
+npm install -g project-setup
+create-project-setup my-app
+cd my-app
+npm run dev
+```
+
+### Method 3: Clone and Setup
+
+```bash
+git clone <repository-url>
+cd project-setup
+npm install
+npm run dev
+```
+
+### Method 4: Using Setup Scripts
+
+**Windows:**
+```powershell
+npm run setup:win
+```
+
+**Linux/Mac:**
+```bash
+npm run setup:unix
+```
+
+## 🎯 Features
 
 - **Authentication System**
   - Login/Registration with email and password
@@ -34,53 +110,6 @@ A comprehensive bus management system built with React, TypeScript, Redux Toolki
   - Redux Toolkit with RTK Query
   - Centralized authentication state
   - Type-safe with TypeScript
-
-## 📋 Prerequisites
-
-- Node.js 18+ and npm
-- Modern web browser
-
-## 🛠️ Quick Setup (One Command)
-
-### Windows (PowerShell)
-```powershell
-npm install && npm run dev
-```
-
-### Linux/Mac
-```bash
-npm install && npm run dev
-```
-
-The application will start on `http://localhost:5000`
-
-## 📦 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd project-setup
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-5. **Preview production build**
-   ```bash
-   npm run preview
-   ```
 
 ## 🔐 Demo Credentials
 
@@ -115,6 +144,7 @@ project-setup/
 │   ├── lib/                 # Utility functions
 │   └── main.tsx             # Application entry point
 ├── public/                   # Static assets
+├── bin/                      # CLI scripts
 ├── package.json              # Dependencies and scripts
 ├── tsconfig.json            # TypeScript configuration
 ├── vite.config.ts           # Vite configuration
@@ -149,6 +179,8 @@ The application uses demo data. In production, replace the demo endpoints in `sr
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run setup` - Install dependencies and build
+- `npm run create` - Create new project from template
 
 ## 🌐 Routes
 
@@ -179,6 +211,12 @@ Edit `src/index.css` to customize colors and theme variables.
 ### API Configuration
 Update `src/store/api/apiSlice.ts` to connect to your backend API.
 
+### Project Name
+Replace "Project Setup" with your project name throughout the codebase:
+- `src/components/website/website-navbar.tsx`
+- `src/components/website/website-footer.tsx`
+- `src/pages/home/home-page.tsx`
+
 ## 🐛 Troubleshooting
 
 ### Build Errors
@@ -201,6 +239,12 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
+### NPX Command Not Found
+If `npx create-project-setup` doesn't work:
+1. Ensure Node.js 18+ is installed
+2. Update npm: `npm install -g npm@latest`
+3. Try: `npm install -g project-setup` then `create-project-setup my-app`
+
 ## 📝 Development Notes
 
 - All authentication is currently using demo data
@@ -208,6 +252,44 @@ npm install
 - Token and user data are stored in localStorage
 - The application uses Redux for global state management
 - All components are TypeScript typed
+
+## 🔄 Creating New Projects
+
+### Using the CLI
+
+```bash
+# Create a new project
+npx create-project-setup my-new-project
+
+# Or if installed globally
+create-project-setup my-new-project
+```
+
+### Manual Setup
+
+1. Clone this repository
+2. Copy all files to your new project directory
+3. Update `package.json` with your project name
+4. Run `npm install`
+5. Customize the codebase for your needs
+
+## 📦 Publishing as NPM Package
+
+To publish this as an npm package:
+
+```bash
+# Login to npm
+npm login
+
+# Publish
+npm publish
+```
+
+Then users can install it with:
+```bash
+npm install -g project-setup
+create-project-setup my-app
+```
 
 ## 🤝 Contributing
 
@@ -218,7 +300,7 @@ npm install
 
 ## 📄 License
 
-This project is private and proprietary.
+MIT License - feel free to use this template for your projects.
 
 ## 👨‍💻 Author
 
@@ -226,4 +308,14 @@ Built with ❤️ for better web experiences.
 
 ---
 
-**Note:** This is a demo application. For production use, implement proper backend authentication, API security, and data validation.
+## 🎉 Getting Started Checklist
+
+- [ ] Install Node.js 18+
+- [ ] Run `npx create-project-setup my-app` or clone this repo
+- [ ] Install dependencies: `npm install`
+- [ ] Start dev server: `npm run dev`
+- [ ] Open `http://localhost:5000`
+- [ ] Login with demo credentials
+- [ ] Customize for your project needs
+
+**Note:** This is a template/boilerplate. For production use, implement proper backend authentication, API security, and data validation.

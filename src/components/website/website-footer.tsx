@@ -19,7 +19,7 @@ export function WebsiteFooter() {
               <div className="h-8 w-8 rounded-full bg-foreground flex items-center justify-center">
                 <span className="text-background text-lg font-bold">B</span>
               </div>
-              <span className="text-lg font-bold">Bus Admin</span>
+              <span className="text-lg font-bold">Project Setup</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               An open-source bus management system for managing routes, schedules, and passengers - built with modern web technologies.
@@ -191,7 +191,7 @@ export function WebsiteFooter() {
         {/* Copyright Section */}
         <div className="border-t py-6">
           <p className="text-center text-sm text-muted-foreground">
-            ©{currentYear} Bus Admin, Made with ❤️ for better web.
+            ©{currentYear} Project Setup, Made with ❤️ for better web.
           </p>
         </div>
       </div>

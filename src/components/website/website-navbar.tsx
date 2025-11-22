@@ -25,7 +25,7 @@ export function WebsiteNavbar() {
           {/* Logo */}
           <div className="flex items-center">
             <NavLink to="/" className="text-xl font-bold">
-              Bus Admin
+              Project Setup
             </NavLink>
           </div>
 
