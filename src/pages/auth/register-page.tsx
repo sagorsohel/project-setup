@@ -21,7 +21,7 @@ export default function RegisterPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();
-  const [register, { isLoading, error }] = useRegisterMutation();
+  const [register, { isLoading }] = useRegisterMutation();
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -31,7 +31,6 @@ export default function RegisterPage() {
 
   // Determine redirect path based on URL
   const isAdminRegister = location.pathname.includes('/admin/register');
-  const redirectPath = isAdminRegister ? '/admin/dashboard' : '/user/dashboard';
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -21,7 +21,7 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();
-  const [login, { isLoading, error }] = useLoginMutation();
+  const [login, { isLoading }] = useLoginMutation();
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +29,6 @@ export default function LoginPage() {
 
   // Determine redirect path based on URL
   const isAdminLogin = location.pathname.includes('/admin/login');
-  const redirectPath = isAdminLogin ? '/admin/dashboard' : '/user/dashboard';
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

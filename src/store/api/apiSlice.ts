@@ -1,6 +1,14 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import type { RootState } from '../index'
 import type { User } from '../slices/authSlice'
+
+// Define RootState type separately to avoid circular dependency
+type RootState = {
+  auth: {
+    user: User | null
+    token: string | null
+    isAuthenticated: boolean
+  }
+}
 
 // Demo data for authentication
 interface DemoUser {
@@ -164,7 +172,7 @@ export const apiSlice = createApi({
       { message: string },
       { email: string; code: string; newPassword: string }
     >({
-      queryFn: async ({ email, code, newPassword }) => {
+      queryFn: async ({ email, code, newPassword: _newPassword }) => {
         await delay(500)
         
         const user = DEMO_USERS[email]
@@ -189,7 +197,7 @@ export const apiSlice = createApi({
           }
         }
 
-        // In a real app, update password in database
+        // In a real app, update password in database using _newPassword
         // For demo, we'll just simulate success
         return {
           data: {
@@ -201,12 +209,12 @@ export const apiSlice = createApi({
 
     // Get current user
     getCurrentUser: builder.query<User, void>({
-      queryFn: async (_, { getState }) => {
+      queryFn: async (_, { getState }): Promise<{ data: User } | { error: { status: number; data: { message: string } } }> => {
         await delay(300)
         
         const state = getState() as RootState
-        const token = state.auth.token
-        const user = state.auth.user
+        const token: string | null = state.auth.token
+        const user: User | null = state.auth.user
         
         if (!token || !user) {
           return {
