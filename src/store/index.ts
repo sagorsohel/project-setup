@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit'
-import type { PreloadedState } from '@reduxjs/toolkit'
 import { apiSlice } from './api/apiSlice'
 import authReducer from './slices/authSlice'
 

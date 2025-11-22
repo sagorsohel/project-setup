@@ -1,7 +1,9 @@
 "use client";
 
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { Ellipsis, LogOut } from "lucide-react";
+import { useAppDispatch } from "@/store/hooks";
+import { logout } from "@/store/slices/authSlice";
 
 import { cn } from "@/lib/utils";
 import { getUserMenuList } from "@/lib/user-menu-list";
@@ -21,7 +23,14 @@ interface MenuProps {
 
 export function UserMenu({ isOpen }: MenuProps) {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const menuList = getUserMenuList(pathname);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate('/');
+  };
 
   return (
     <ScrollArea className="[&>div>div[style]]:!block">
@@ -117,7 +126,7 @@ export function UserMenu({ isOpen }: MenuProps) {
               <Tooltip delayDuration={100}>
                 <TooltipTrigger asChild>
                   <Button
-                    onClick={() => {}}
+                    onClick={handleLogout}
                     variant="outline"
                     className="w-full justify-center h-10 mt-5"
                   >
