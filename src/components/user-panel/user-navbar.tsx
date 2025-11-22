@@ -1,6 +1,8 @@
+"use client";
+
 import { ModeToggle } from "@/components/mode-toggle";
 import { UserNav } from "@/components/admin-panel/user-nav";
-import { SheetMenu } from "@/components/admin-panel/sheet-menu";
+import { SheetMenu } from "@/components/user-panel/user-sheet-menu";
 
 interface NavbarProps {
   title: string;
@@ -22,3 +24,4 @@ export function Navbar({ title }: NavbarProps) {
     </header>
   );
 }
+

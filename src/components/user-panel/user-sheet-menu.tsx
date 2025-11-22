@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { MenuIcon, PanelsTopLeft } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Menu } from "@/components/admin-panel/menu";
+import { UserMenu } from "@/components/user-panel/user-menu";
 import {
   Sheet,
   SheetHeader,
@@ -26,14 +26,15 @@ export function SheetMenu() {
             variant="link"
             asChild
           >
-            <Link to="/admin/dashboard" className="flex items-center gap-2">
+            <Link to="/user/dashboard" className="flex items-center gap-2">
               <PanelsTopLeft className="w-6 h-6 mr-1" />
-              <SheetTitle className="font-bold text-lg">Brand</SheetTitle>
+              <SheetTitle className="font-bold text-lg">User Panel</SheetTitle>
             </Link>
           </Button>
         </SheetHeader>
-        <Menu isOpen />
+        <UserMenu isOpen />
       </SheetContent>
     </Sheet>
   );
 }
+
