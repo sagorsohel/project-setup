@@ -7,7 +7,10 @@
     "dev": "vite --port 5000",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "setup": "npm install && npm run build",
+    "setup:win": "powershell -ExecutionPolicy Bypass -File ./setup.ps1",
+    "setup:unix": "chmod +x ./setup.sh && ./setup.sh"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
